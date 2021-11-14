@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script&family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400;700&family=Oleo+Script&family=Roboto:wght@400;700&display=swap');
+
+.container{
+    
+    width: 700px;
+    margin-left: 40vw;
+    margin-right: 40vw; 
+}
+
+button{
+    color: white;
+    border-color: rgba(255, 0, 0, 0.329);
+    background: rgba(255, 0, 0, 0.973);
+    font-size: 15px;
+    border-radius: 5px;
+    width: 120px;
+    height: 35px;
+}
+
+input{
+    border-width: 1px;
+    border-color: red;
+    border-radius: 8px;
+    height: 30px;
+    display: block;
+    font-size: initial;
+    }
+
+* {
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Oleo Script';
+    font-weight: normal;
+}
+
+body {
+    font-family: 'Lexend Deca';
+    background-color: #F0F0F7;
+}
+
+header {
+    background-color: #B00E0E;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo span {
+    margin-right: 0.625rem;
+}
+
+header div + div {
+    display: flex;
+    align-items: center;
+}
+
+header div + div span + span {
+    margin-left: 2rem;
+}
+
+header div + div span + span:hover {
+    cursor: pointer;
+}
