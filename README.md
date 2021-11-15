@@ -11,6 +11,6 @@
 [Figma](https://www.figma.com/file/61WKB27pzUqMxv9l2IhRw1/Prot%C3%B3tipo-AdotePet?node-id=0%3A1)
 
 **Diagrama de classes**
-![Diagrama de classes](https://github.com/matheuss3/AdotePet/blob/main/diagramas-uml/diagrama-classes.png)
+![Diagrama de classes](https://github.com/matheuss3/AdotePet/blob/main/diagramas-uml/diagrama-classes.jpg)
 **Casos de uso**
 ![Diagrama de casos de uso](https://github.com/matheuss3/AdotePet/blob/main/diagramas-uml/diagrama-casos-uso.png)
