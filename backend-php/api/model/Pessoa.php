@@ -55,13 +55,13 @@ class Pessoa {
         return $this;
     }
 
-    public function get_email($email) {
+    public function set_email($email) {
         $this->email=$email;
-        return $this
+        return $this;
     }
 
-    public function get_telefone($telefone) {
+    public function set_telefone($telefone) {
         $this->telefone=$telefone;
-        return $this
+        return $this;
     }
 }
