@@ -37,4 +37,20 @@ class AnuncioAdocao {
     public function setDescricao($descricao) {
         $this->descricao = $descricao;
     }
+    
+    public function getEstado() {
+        return $this->estado;
+    }
+    
+    public function getCidade() {
+        return $this->cidade;
+    }
+    
+    public function getBairro() {
+        return $this->bairro;
+    }
+    
+    public function getDescricao() {
+        return $this->descricao;
+    }
 }
