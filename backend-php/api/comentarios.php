@@ -4,7 +4,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/rotas/IRouter.php";
 require_once $_SERVER['DOCUMENT_ROOT'] . "/model/comentario.php";
 require_once $_SERVER['DOCUMENT_ROOT'] . "/rotas/Router.php";
 
-class comentario implements IRouter{
+class comentarios implements IRouter{
     
     
     public function post() {
@@ -19,12 +19,12 @@ class comentario implements IRouter{
         $arrResponse = array();
         
         $coment1 = array();
-        $coment1["data"] = '20/08/2020');
+        $coment1["data"] = '20/08/2020';
         $coment1["hora"] = '20:10';
         $coment1["descricao"] = 'Quero muito ser a dona desse gato';
         
         $coment2 = array();
-        $coment2["data"] = '14/06/2020');
+        $coment2["data"] = '14/06/2020';
         $coment2["hora"] = '15:10';
         $coment2["descricao"] = 'Que lindo esse cachorro';
         
@@ -43,6 +43,6 @@ class comentario implements IRouter{
     }
 }
 
-$coments = new comentario();
+$coments = new comentarios();
 $router = new Router($coments);
 $router->run();
