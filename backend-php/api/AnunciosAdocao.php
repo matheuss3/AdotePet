@@ -8,6 +8,7 @@
 
 require_once $_SERVER['DOCUMENT_ROOT'] . "/rotas/IRouter.php";
 require_once $_SERVER['DOCUMENT_ROOT'] . "/model/AnuncioAdocao.php";
+require_once $_SERVER['DOCUMENT_ROOT'] . "/persistencia/AnuncioAdocaoMapper.php";
 require_once $_SERVER['DOCUMENT_ROOT'] . "/rotas/Router.php";
 
 class AnunciosAdocao implements IRouter{
@@ -15,14 +16,21 @@ class AnunciosAdocao implements IRouter{
     
     public function post() {
         $anuncio = new AnuncioAdocao();
-        $anuncio->setEstado($_POST['estado']);
-        $anuncio->setCidade($_POST['cidade']);
-        $anuncio->setBairro($_POST['bairro']);
-        $anuncio->setDescricao($_POST['descricao']);
+//        $anuncio->setEstado($_POST['estado']);
+//        $anuncio->setCidade($_POST['cidade']);
+//        $anuncio->setBairro($_POST['bairro']);
+//        $anuncio->setDescricao($_POST['descricao']);
         
-        /*
-         * Salvar no banco de dados
-         */
+        $anuncio->setEstado('ES');
+        $anuncio->setCidade('Serra');
+        $anuncio->setBairro('Muribeca');
+        $anuncio->setDescricao('Cachorrinho abandonado recuperado das ruas, está '
+                . 'precisando de bons donos');
+        
+        
+        $anuncioMapper = new AnuncioAdocaoMapper();
+        
+        $anuncioMapper->salvar($anuncio);
     }
     
     public function get() {
