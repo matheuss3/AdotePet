@@ -6,7 +6,7 @@ public class FabricaPessoa {
 
     public static ITipoPessoa criarPessoa(String tipo, String nome, String cpf, String endereco, String email, String telefone) {
 
-        Pessoa pessoa;
+        ITipoPessoa pessoa = null;
 
         if(tipo.equalsIgnoreCase("Adotante")){
             pessoa = new Adotante(nome, cpf, endereco, email, telefone);
