@@ -29,11 +29,13 @@ class Vacinas implements IRouter {
 
     public function post() {
         $vacina = new Vacina();
-        $vacina->set_nome($_POST['nome']);
+        //$vacina->set_nome($_POST['nome']);
+        
+        $vacina->set_nome("antirrábica");
 
-        /*
-         * Salvar no banco de dados
-         */
+        $vacinaMapper = new VacinaMapper();
+
+        $vacinaMapper->salvar($vacina);
 
     }
 
