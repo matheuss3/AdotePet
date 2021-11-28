@@ -29,11 +29,13 @@ class VacinasTomadas implements IRouter {
 
     public function post() {
         $vacinaTomada = new VacinaTomada();
-        $vacinaTomada->set_dataVacinacao($_POST['dataVacinacao']);
+        //$vacinaTomada->set_dataVacinacao($_POST['dataVacinacao']);
 
-        /*
-         * Salvar no banco de dados
-         */
+        $vacinaTomada->set_dataVacinacao("2020/08/09");
+
+        $vacinaTomadaMapper = new VacinaTomadaMapper();
+
+        $vacinaTomadaMapper->salvar($vacinaTomada);
 
     }
 
