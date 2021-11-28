@@ -33,13 +33,17 @@ class Animais implements IRouter {
 
     public function post() {
         $animal = new Animal();
-        $animal->set_raca($_POST['raca']);
-        $animal->set_nome($_POST['nome']);
-        $animal->set_idade($_POST['idade']);
+        //$animal->set_raca($_POST['raca']);
+        //$animal->set_nome($_POST['nome']);
+        //$animal->set_idade($_POST['idade']);
+        
+        $animal->set_raca("Persa");
+        $animal->set_nome("Léo");
+        $animal->set_idade("1 ano e 5 meses");
 
-        /*
-         * Salvar no banco de dados
-         */
+        $animalMapper = new AnimalMapper();
+
+        $animalMapper->salvar($animal);
 
     }
 
