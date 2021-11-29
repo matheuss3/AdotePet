@@ -41,7 +41,7 @@ class Animais implements IRouter {
          * Salvar no banco de dados
          */
         
-        $PessoaMapper = new FotoMapper();
+        $PessoaMapper = new PessoaMapper();
 
         $PessoaMapper->salvar($humano);
 
