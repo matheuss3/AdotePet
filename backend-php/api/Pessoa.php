@@ -5,7 +5,7 @@
 require_once $_SERVER['DOCUMENT_ROOT'] . "/api/model/Pessoa.php";
 require_once $_SERVER['DOCUMENT_ROOT'] . "/api/rotas/IRouter.php";
 require_once $_SERVER['DOCUMENT_ROOT'] . "/api/rotas/Router.php";
-require_once $_SERVER['DOCUMENT_ROOT'] . "/api/persistencia/FotoMapper.php";
+require_once $_SERVER['DOCUMENT_ROOT'] . "/api/persistencia/PessoaMapper.php";
 
 //padrao de projetos strategy   
 class Animais implements IRouter {
@@ -41,9 +41,9 @@ class Animais implements IRouter {
          * Salvar no banco de dados
          */
         
-        $animalMapper = new FotoMapper();
+        $PessoaMapper = new FotoMapper();
 
-        $animalMapper->salvar($humano);
+        $PessoaMapper->salvar($humano);
 
     }
 
