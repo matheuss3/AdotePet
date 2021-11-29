@@ -29,7 +29,7 @@ class Animais implements IRouter {
          */
         $FotoMapper = new FotoMapper();
 
-        $FotoMapper->salvar($humano);
+        $FotoMapper->salvar($foto);
 
     }
 
