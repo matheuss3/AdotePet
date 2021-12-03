@@ -1,5 +1,6 @@
 package adotepet;
 
+import java.util.Calendar;
 import java.util.Date;
 
 public class Mensagem extends Observado {
@@ -15,7 +16,7 @@ public class Mensagem extends Observado {
     }
 
     public void envio() {
-        setData(new Date());
+        setData(Calendar.getInstance().getTime());
         notificaTodos();
     }
 
