@@ -1,3 +1,0 @@
-/*
-    Ainda será implementado
-*/

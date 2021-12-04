@@ -6,10 +6,10 @@
  * @author Matheus
  */
 
-require_once $_SERVER['DOCUMENT_ROOT'] . "/rotas/IRouter.php";
-require_once $_SERVER['DOCUMENT_ROOT'] . "/model/AnuncioAdocao.php";
-require_once $_SERVER['DOCUMENT_ROOT'] . "/persistencia/AnuncioAdocaoMapper.php";
-require_once $_SERVER['DOCUMENT_ROOT'] . "/rotas/Router.php";
+require_once $_SERVER['DOCUMENT_ROOT'] . "/api/rotas/IRouter.php";
+require_once $_SERVER['DOCUMENT_ROOT'] . "/api/model/AnuncioAdocao.php";
+require_once $_SERVER['DOCUMENT_ROOT'] . "/api/persistencia/AnuncioAdocaoMapper.php";
+require_once $_SERVER['DOCUMENT_ROOT'] . "/api/rotas/Router.php";
 
 class AnunciosAdocao implements IRouter{
     

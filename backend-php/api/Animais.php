@@ -26,25 +26,23 @@ class Animais implements IRouter {
        $animal2["nome"] = "Léo";
        $animal2["idade"] = "1 ano e 5 meses";
        
-       array_push($ArrayResposta ,$animal1 , $animal2);
-       echo json_encode($ArrayResposta);
-
+       array_push($Arrayresposta ,$animal1 , $animal2);
+       echo json_encode($Arrayresposta);
     }
 
     public function post() {
         $animal = new Animal();
-        //$animal->set_raca($_POST['raca']);
-        //$animal->set_nome($_POST['nome']);
-        //$animal->set_idade($_POST['idade']);
+        // //$animal->set_raca($_POST['raca']);
+        // //$animal->set_nome($_POST['nome']);
+        // //$animal->set_idade($_POST['idade']);
         
         $animal->set_raca("Persa");
-        $animal->set_nome("Léo");
-        $animal->set_idade("1 ano e 5 meses");
+        $animal->set_nome("Leo");
+        $animal->set_dt_nascimento("2021-01-01");
 
         $animalMapper = new AnimalMapper();
 
         $animalMapper->salvar($animal);
-
     }
 
     public function put() {
@@ -60,5 +58,6 @@ class Animais implements IRouter {
 }
 
 header("Access-Control-Allow-Origin: *");
-$router = new Router(new Animais());
+$rotaAnimais = new Animais();
+$router = new Router($rotaAnimais);
 $router->run();

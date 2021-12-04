@@ -8,7 +8,7 @@
 class Router {
     private $classe;
     
-    public function Router($classe) {
+    public function __construct($classe) {
         $this->classe = $classe;
     }
     
@@ -34,6 +34,8 @@ class Router {
 
     public function get() {
         if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+            echo "Teste";
+            echo var_dump($this->classe);
             $this->classe->get();
             return true;
         }
