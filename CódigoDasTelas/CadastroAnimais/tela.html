@@ -16,23 +16,24 @@
     <body>
       <br>
       <h1 style="text-align: center;">Cadastro de Animais</h1>
+      <form action="/backend/Animais.php" method="post">  
         <div class="container">
             <div  class="perguntas">
                 
                 <label>Nome do pet:
-                    <input type="text">
+                    <input type="text" name="nome">
                   </label>
                   <br>
                   <label>Espécie:
-                    <input type="text">
+                    <input type="text" name="especie">
                   </label>
                   <br>
                   <label>Raça:
-                    <input type="text">
+                    <input type="text" name="raca">
                   </label>
                   <br>
                   <label>Idade :
-                    <input type="number">
+                    <input type="number" name="idade">
                   </label>
             </div>
             
@@ -41,7 +42,7 @@
                 </label>
                 <br><br><br><br>
                 <label >Descrição do pet:
-                    <textarea class="description" style="align-content: left;" type="text"> </textarea>
+                    <textarea class="description" style="align-content: left;" type="text" name="descricao"> </textarea>
                   </label>
                  
             </div>
@@ -49,9 +50,9 @@
         </div>
         <div class="botao">
 
-          <button><b>Confirmar</b></button>
+          <button type="submit"><b>Confirmar</b></button>
         </div>
-        
+      </form>
         
          
         
