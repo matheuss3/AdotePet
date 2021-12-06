@@ -4,10 +4,13 @@
  * @author Eduardo
  */
 class Animal {
-   
+  
     private $raca;
     private $nome;
     private $idade;
+    private $especie;
+    private $descricao;
+    private $foto;
    
     public function get_raca() {
         return $this->raca;
@@ -23,17 +26,38 @@ class Animal {
 
     public function set_raca($raca) {
         $this->raca = $raca;
-        return $this;
     }
 
     public function set_nome($nome) {
         $this->nome = $nome;
-        return $this;
     }
 
     public function set_idade($idade) {
         $this->idade = $idade;
-        return $this;
+    }
+
+    public function get_especie() {
+        return $this->especie;
+    }
+
+    public function set_especie($especie) {
+        $this->especie = $especie;
+    }
+
+    public function get_descricao() {
+        return $this->descricao;
+    }
+
+    public function set_descricao($descricao) {
+        $this->descricao = $descricao;
+    }
+
+    public function get_foto() {
+        return $this->foto;
+    }
+
+    public function set_foto($foto) {
+        $this->foto = $foto;
     }
 
 }
