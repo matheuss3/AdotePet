@@ -7,7 +7,7 @@ class Animal {
    
     private $raca;
     private $nome;
-    private $idade;
+    private $dt_nascimento;
    
     public function get_raca() {
         return $this->raca;
@@ -17,8 +17,8 @@ class Animal {
         return $this->nome;
     }
 
-    public function get_idade() {
-        return $this->idade;
+    public function get_dt_nascimento() {
+        return $this->dt_nascimento;
     }
 
     public function set_raca($raca) {
@@ -31,8 +31,8 @@ class Animal {
         return $this;
     }
 
-    public function set_idade($idade) {
-        $this->idade = $idade;
+    public function set_dt_nascimento($dt_nascimento) {
+        $this->dt_nascimento = $dt_nascimento;
         return $this;
     }
 
