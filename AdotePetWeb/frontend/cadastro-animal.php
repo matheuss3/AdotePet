@@ -32,7 +32,13 @@
 
         <br>
         <label>Espécie:</label>
-        <input type="text" name="especie">
+        <select name="especie">
+          <option value="Cachorros">Cachorros</option>
+          <option value="Coelhos">Coelhos</option>
+          <option value="Gatos">Gatos</option>
+          <option value="Aves">Aves</option>
+          <option value="Peixes">Peixes</option>
+        </select>
 
         <br>
         <label>Raça:</label>

@@ -1,11 +1,11 @@
 <?php
 
-require_once $_SERVER['DOCUMENT_ROOT'] . "/api/model/Animal.php";
-require_once $_SERVER['DOCUMENT_ROOT'] . "/api/persistencia/AnimalMapper.php";
+require_once './model/Animal.php';
+require_once './persistencia/AnimalMapper.php';
 
 # Router
-require_once $_SERVER['DOCUMENT_ROOT'] . "/api/rotas/IRouter.php";
-require_once $_SERVER['DOCUMENT_ROOT'] . "/api/rotas/Router.php";
+require_once './rotas/IRouter.php';
+require_once './rotas/Router.php';
 
 //padrao de projetos strategy   
 class Animais implements IRouter {
@@ -34,15 +34,21 @@ class Animais implements IRouter {
 
     public function post() {
         $animal = new Animal();
-
+        var_dump($animal);
         if (isset($_POST['raca'])) {
             $animal->set_raca($_POST['raca']);
+        }
+        if (isset($_POST['especie'])) {
+            $animal->set_especie($_POST['especie']);
         }
         if (isset($_POST['nome'])) {
             $animal->set_nome($_POST['nome']);
         }
         if (isset($_POST['dt_nascimento'])) {
             $animal->set_dt_nascimento($_POST['dt_nascimento']);
+        }
+        if (isset($_POST['descricao'])) {
+            $animal->set_descricao($_POST['descricao']);
         }
         
         $animalMapper = new AnimalMapper();

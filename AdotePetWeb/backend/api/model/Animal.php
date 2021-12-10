@@ -6,7 +6,27 @@
 class Animal {
     private $raca;
     private $nome;
+    private $especie;
     private $dt_nascimento;
+    private $descricao;
+
+    public function get_especie() {
+        return $this->especie;
+    }
+
+    public function set_especie($especie) {
+        $this->especie = $especie;
+        return $this;
+    }
+
+    public function get_descricao() {
+        return $this->descricao;
+    }
+
+    public function set_descricao($descricao) {
+        $this->descricao = $descricao;
+        return $this;
+    }
    
     public function get_raca() {
         return $this->raca;

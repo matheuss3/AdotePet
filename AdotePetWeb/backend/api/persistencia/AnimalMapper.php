@@ -1,6 +1,6 @@
 <?php
 
-require_once $_SERVER['DOCUMENT_ROOT'] . "/api/model/Animal.php";
+require_once './model/Animal.php';
 
 class AnimalMapper {
   private $conexao;
@@ -10,8 +10,9 @@ class AnimalMapper {
   }
 
   public function salvar($animal) {
-    $sql = "INSERT INTO animais (nome, raca, dt_nascimento) VALUES (?,?,?)";
+    $sql = "INSERT INTO animais (nome, raca, dt_nascimento, especie, descricao) VALUES (?,?,?,?,?)";
     $stmt = $this->conexao->prepare($sql);
-    $stmt->execute([$animal->get_nome(), $animal->get_raca(), $animal->get_dt_nascimento()]);
+    $stmt->execute([$animal->get_nome(), $animal->get_raca(), 
+      $animal->get_dt_nascimento(), $animal->get_especie(), $animal->get_descricao()]);
   }
 }
