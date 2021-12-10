@@ -7,5 +7,5 @@ function salvaAnimal(botao) {
 
   new ControleAnimais().post(botao)
 }
-console.log(buttonElement)
+
 buttonElement.addEventListener('click', salvaAnimal)

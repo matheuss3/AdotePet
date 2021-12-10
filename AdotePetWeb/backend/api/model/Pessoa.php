@@ -8,10 +8,54 @@ class Pessoa {
     private $nome;
     private $cpf;
     private $dataNascimento;
-    private $endereco;
+    private $rua;
+    private $bairro;
+    private $cidade;
+    private $estado;
     private $email;
     private $telefone;
-   
+    private $tipoPessoa;
+    private $login;
+    private $senha;
+
+    public function get_login() {
+        return $this->login;
+    }
+    
+    public function set_login($login) {
+        $this->login = $login;
+        return $this;
+    }
+
+    public function get_senha() {
+        return $this->senha;
+    }
+    
+    public function set_senha($senha) {
+        $this->senha = $senha;
+        return $this;
+    }
+
+    public function get_rua() {
+        return $this->rua;
+    }
+
+    public function get_bairro() {
+        return $this->bairro;
+    }
+
+    public function get_cidade() {
+        return $this->cidade;
+    }
+
+    public function get_estado() {
+        return $this->estado;
+    }
+
+    public function get_tipoPessoa() {
+        return $this->tipoPessoa;
+    }
+
     public function get_cpf() {
         return $this->cpf;
     }
@@ -41,7 +85,7 @@ class Pessoa {
     }
 
     public function set_cpf($cpf) {
-        $this->nome = $cpf;
+        $this->cpf = $cpf;
         return $this;
     }
 
@@ -62,6 +106,31 @@ class Pessoa {
 
     public function set_telefone($telefone) {
         $this->telefone=$telefone;
+        return $this;
+    }
+
+    public function set_rua($rua) {
+        $this->rua=$rua;
+        return $this;
+    }
+
+    public function set_bairro($bairro) {
+        $this->bairro=$bairro;
+        return $this;
+    }
+
+    public function set_cidade($cidade) {
+        $this->cidade=$cidade;
+        return $this;
+    }
+
+    public function set_estado($estado) {
+        $this->estado=$estado;
+        return $this;
+    }
+
+    public function set_tipoPessoa($tipoPessoa) {
+        $this->tipoPessoa=$tipoPessoa;
         return $this;
     }
 }
