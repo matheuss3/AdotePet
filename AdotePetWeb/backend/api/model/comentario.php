@@ -5,15 +5,15 @@ class comentario{
     private $hora;
     private $descricao;
     
-    public function setData($data) {
+    public function set_data($data) {
         $this->data = $data;
     }
     
-    public function setHora($hora) {
+    public function set_hora($hora) {
         $this->hora = $hora;
     }
  
-    public function setDescricao($descricao) {
+    public function set_descricao($descricao) {
         $this->descricao = $descricao;
     }
 }

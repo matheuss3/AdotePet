@@ -5,15 +5,15 @@ class mensagemclass {
     private $hora;
     private $conteudo;
     
-    public function setData($data) {
+    public function set_data($data) {
         $this->data = $data;
     }
     
-    public function setHora($hora) {
+    public function set_hora($hora) {
         $this->hora = $hora;
     }
  
-    public function setConteudo($conteudo) {
+    public function set_conteudo($conteudo) {
         $this->conteudo = $conteudo;
     }
 }

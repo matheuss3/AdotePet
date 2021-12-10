@@ -54,63 +54,59 @@ header div + div span + span:hover {
 label{
   font-size: 20px;
 }
-  
-.desc{
-    margin-left: 200px;
-}
+
 .container{
-    margin-top: 50px;
+    max-width: 720px;
+    margin: 3rem auto;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
 }
 
-.botao{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding-top: 50px;
-}
-
-.description{
-  
-  width: 300px;
-  height: 100px;
+.description {
   display: block;
   align-items: initial;
-
 }
- 
 
-button{
+.botao {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 3rem;
+}
+
+
+button {
   color: white;
-  border-color: red;
-  background: rgb(245,126,126);
-  background: linear-gradient(0deg, rgba(176,14,14,1) 0%, rgba(255,0,0,1) 70%, rgba(255,90,90,1) 100%);
-  font-size: 18px;
-  border-radius: 5px;
-  width: 100px;
-  height: 50px;
+  border: none;
+  font-family: 'Lexend Deca';
+  background: rgb(228, 14, 14);
+  font-size: 1.2rem;
+  border-radius: 10px;
+  padding: 1rem;
+  transition: all 0.2s;
 }
 
-input{
+button:hover {
+  cursor: pointer;
+  filter: brightness(1.75);
+}
+
+input {
   border-width: 1px;
-  padding: 1rem;
+  padding: 0.5rem;
   border-color: red;
-  border-radius: 8px;
-  height: 30px;
+  border-radius: 5px;
   display: block;
-  font-size: initial;
+  width: 100%;
 }
 
 textarea{  
   border-color: red;
   border-width: 1px;
-  font-size: 18px;
   border-radius: 5px;
-  width: 100px;
-  height: 50px;
+  width: 100%;
+  height: 8rem;
   resize: none;
+  padding: 0.5rem;
 }

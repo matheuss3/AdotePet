@@ -1,23 +1,25 @@
 <?php
 
-require_once $_SERVER['DOCUMENT_ROOT'] . "/rotas/IRouter.php";
-require_once $_SERVER['DOCUMENT_ROOT'] . "/model/comentario.php";
-require_once $_SERVER['DOCUMENT_ROOT'] . "/rotas/Router.php";
+/**
+ * Description of Comentarios
+ *
+ * @author Thaís
+ */
+ 
+require_once $_SERVER['DOCUMENT_ROOT'] . "/api/model/Comentario.php";
+require_once $_SERVER['DOCUMENT_ROOT'] . "/api/persistencia/ComentarioMapper.php";
 
-class comentarios implements IRouter{
-    
-    
-    public function post() {
-        $coment = new comentario();
-        $coment->setData($_POST['data']);
-        $coment->setHora($_POST['hora']);
-        $coment->setDescricao($_POST['descricao']);
-        
-    }
+require_once $_SERVER['DOCUMENT_ROOT'] . "/api/rotas/IRouter.php";
+require_once $_SERVER['DOCUMENT_ROOT'] . "/api/rotas/Router.php";
+
+class Comentarios implements IRouter{
     
     public function get() {
-        $arrResponse = array();
+   
+    	// $comentarioMapper = new ComentarioMapper();
+        // $ArrayResposta = $comentarioMapper->buscar();
         
+        $Arrayresposta = array();
         $coment1 = array();
         $coment1["data"] = '20/08/2020';
         $coment1["hora"] = '20:10';
@@ -28,21 +30,42 @@ class comentarios implements IRouter{
         $coment2["hora"] = '15:10';
         $coment2["descricao"] = 'Que lindo esse cachorro';
         
-        array_push($arrResponse, $coment1, $coment2);
+        array_push($Arrayresposta, $coment1, $coment2);
         
-        echo json_encode($arrResponse);
+        echo json_encode($Arrayresposta);
         
+    }
+    
+    public function post() {
+    
+        $coment = new Comentario();
+        
+        if (isset($_POST['data'])) {
+            $coment->set_data($_POST['data']);
+        }
+        if (isset($_POST['hora'])) {
+            $coment->set_hora($_POST['hora']);
+        }
+        if (isset($_POST['descricao'])) {
+            $coment->set_descricao($_POST['descricao']);
+        }
+        
+        $comentMapper = new ComentarioMapper();
+        $comentMapper->salvar($coment);
     }
     
     public function put() {
-        
+        http_response_code(404);
+        throw new Exception("Não implementado ainda");
     }
-    
+
     public function delete() {
-        
+        http_response_code(404);
+        throw new Exception("Não implementado ainda");
     }
 }
 
-$coments = new comentarios();
-$router = new Router($coments);
+header("Access-Control-Allow-Origin: *");
+$rotaComentarios = new Comentarios();
+$router = new Router($rotaComentarios);
 $router->run();

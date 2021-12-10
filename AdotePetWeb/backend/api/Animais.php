@@ -48,6 +48,8 @@ class Animais implements IRouter {
         $animalMapper = new AnimalMapper();
 
         $animalMapper->salvar($animal);
+
+        http_response_code(201);
     }
 
     public function put() {
