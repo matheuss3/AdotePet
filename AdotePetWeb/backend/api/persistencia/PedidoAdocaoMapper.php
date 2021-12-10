@@ -12,6 +12,6 @@ class PedidoAdocaoMapper {
   public function salvar($pedidoAdocao) {
     $sql = "INSERT INTO pedidosAdocao (dataHora, descricao, situacao, dataAlteracaoSituacao) VALUES (?,?,?,?)";
     $stmt = $this->conexao->prepare($sql);
-    $stmt->execute([$adotante->get_dataHora(), $adotante->get_descricao(), $adotante->get_situacao(), $adotante->get_dataAlteracaoSituacao()]);
+    $stmt->execute([$pedidoAdocao->get_dataHora(), $pedidoAdocao->get_descricao(), $pedidoAdocao->get_situacao(), $pedidoAdocao->get_dataAlteracaoSituacao()]);
   }
 }
