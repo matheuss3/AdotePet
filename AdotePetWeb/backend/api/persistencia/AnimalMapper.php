@@ -1,6 +1,6 @@
 <?php
 
-require_once './model/Animal.php';
+require_once __DIR__ . '/../model/Animal.php';
 
 class AnimalMapper {
   private $conexao;
