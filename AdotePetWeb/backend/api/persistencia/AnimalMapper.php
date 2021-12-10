@@ -15,4 +15,13 @@ class AnimalMapper {
     $stmt->execute([$animal->get_nome(), $animal->get_raca(), 
       $animal->get_dt_nascimento(), $animal->get_especie(), $animal->get_descricao()]);
   }
+
+  public function buscar() {
+    $sql = "select * from animais";
+    $statement = $this->conexao->prepare($sql);
+    $statement->execute();
+    $results = $statement->fetchAll(PDO::FETCH_ASSOC);
+    $json = json_encode($results);
+    return  $json;
+  }
 }

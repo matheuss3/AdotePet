@@ -11,25 +11,11 @@ require_once './rotas/Router.php';
 class Animais implements IRouter {
 
     public function get() {
-       // $animalMapper = new AnimalMapper();
-       // $ArrayResposta = $animalMapper->buscar();
+       $animalMapper = new AnimalMapper();
 
-       //mock para teste o desenvolvimento
-       $Arrayresposta = array();
-       $animal1 = array();
-       $animal1["id"] = 1;
-       $animal1["raca"] = "Poodle";
-       $animal1["nome"] = "Bilu";
-       $animal1["idade"] = "2 anos e 3 meses";
-       
-       $animal2 = array();
-       $animal2["id"] = 2;
-       $animal2["raca"] = "Persa";
-       $animal2["nome"] = "Léo";
-       $animal2["idade"] = "1 ano e 5 meses";
-       
-       array_push($Arrayresposta ,$animal1 , $animal2);
-       echo json_encode($Arrayresposta);
+       $animais = $animalMapper->buscar();
+
+       echo $animais;
     }
 
     public function post() {
