@@ -21,12 +21,7 @@
         <h1>Cadastro de Pessoa</h1>
         <form id="cadastrarPessoa">
             <div>
-                <div>
-                    <label for="login">Login</label>
-                    <input type="text" name="login"/>
-                    <label for="senha">Senha</label>
-                    <input type="password" name="senha"/>
-                </div>
+
                 <label>Escolha o seu tipo de perfil:</label><br>
                 <div>
                     <input type="radio" name="tipoPessoa" value="D" onclick="exibeComprovanteResidencia(this)">
@@ -34,7 +29,12 @@
                     <input type="radio" name="tipoPessoa" value="A" onclick="exibeComprovanteResidencia(this)">
                     <label >Adotante</label><br><br>
                 </div>
-
+                <div>
+                    <label for="login">Login</label><br>
+                    <input type="text" name="login"  placeholder="Ex: joao129"/><br><br>
+                    <label for="senha">Senha</label><br>    
+                    <input type="password" name="senha" placeholder="*******"/><br><br>
+                </div>
                 <label>Nome:</label><br>
                 <input type="text" placeholder="Ex: João Gomes" name="nome"><br><br>
 
@@ -44,14 +44,16 @@
                 <label>Data de Nascimento:</label><br>
                 <input type="date" name="dataNascimento"><br><br>
 
+            </div>
+            
+            <div class="direita"> 
+                
                 <label>Rua:</label><br>
                 <input type="text" placeholder="Ex: Rua de Marcilio de Noronha" name="rua" ><br><br>
                 
                 <label>Bairro:</label><br>
-                <input type="text" placeholder="Ex: Jardim das Neves" name="bairro"><br>
-            </div>
-            
-            <div class="direita"> 
+                <input type="text" placeholder="Ex: Jardim das Neves" name="bairro"><br><br>
+
                 <div class="cidade">
                     <label>Cidade:</label><br>
                     <input type="text" placeholder="Ex: Vitória" name="cidade"><br><br> 
