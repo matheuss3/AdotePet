@@ -29,6 +29,7 @@ header .conteudo h1{
 
 .principal h1{
     text-align: center;
+    margin-top:15px;
 }
 
 .principal form{
@@ -42,7 +43,7 @@ header .conteudo h1{
     margin-left: 50px;
 }
 
-.principal form input[type="text"], input[type="date"], select{
+.principal form input[type="text"], input[type="date"], select, input[type="password"]{
     width: 250px;
 }
 
