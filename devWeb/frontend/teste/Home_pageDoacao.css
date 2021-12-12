@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script&family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400;700&family=Oleo+Script&family=Roboto:wght@400;700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Oleo Script';
+  font-weight: normal;
+}
+
+body {
+  font-family: 'Lexend Deca';
+  background-color: #F0F0F7;
+}
+
+header {
+  background-color: #B00E0E;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo span {
+  margin-right: 0.625rem;
+}
+
+header div + div {
+  display: flex;
+  align-items: center;
+}
+
+header div + div span + span {
+  margin-left: 2rem;
+}
+
+header div + div span + span:hover {
+  cursor: pointer;
+}
+
+section {
+  max-width: 1200px;
+  margin: auto;
+}
+
+section h1 {
+  display: block;
+  width: 100%;
+  padding: 2rem;
+  font-size: 3rem;
+
+  text-align: center;
+}
+
+.gridCategories {
+  display: grid;
+  align-content: space-around;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.gridCategories div {
+  text-align: center;
+  padding-top: 250px;
+  padding-bottom: 2.5rem;
+  margin: 1rem;
+  border-radius: 1rem;
+  background: #000;
+  font-size: 1.7rem;
+  background-repeat: no-repeat;
+  color: #fff;
+  transition: all 0.2s
+}
+
+.gridCategories div:hover {
+  cursor: pointer;
+  filter: brightness(1.2);
+}
+
+
+@media (max-width: 650px) {
+  .gridCategories {
+    grid-template-columns: 1fr;
+  }
+}
