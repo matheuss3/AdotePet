@@ -17,7 +17,7 @@ class AnimalMapper {
   }
 
   public function buscar() {
-    $sql = "select * from animal";
+    $sql = "select * from animal where especie='Cachorros'";
     $statement = $this->conexao->prepare($sql);
     $statement->execute();
     $results = $statement->fetchAll(PDO::FETCH_ASSOC);
