@@ -17,6 +17,7 @@ body {
   align-items: center;
   justify-content: space-around;
   font-family: 'Lexend Deca';
+  background-color: #f0f0f7;
 }
 
 header {
@@ -51,7 +52,51 @@ header div + div span + span:hover {
   cursor: pointer;
 }
 
-.animais{
-  border: 2px solid black;
+.animais .animal{
+  border: 2px solid rgb(163, 163, 163);
+  display: flex;
+  justify-content: space-around;
+  background-color: #fff;
+  padding: 10px 0px 10px 0px;
+  margin-bottom: 15px;
+  position: relative;
+}
 
+.animais .animal .dadosAnimal{
+  display: inline;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width:400px;
+  text-align: justify;
+}
+
+.animais .animal > img{
+  height: 200px;
+  width: 200px;
+}
+
+.animais .animal .dadosAnimal p{
+  margin-bottom: 6px;
+}
+
+.animais .animal .dadosAnimal button{
+  cursor: pointer;
+  padding: 5px 0px 5px 0px;
+  font-family: 'Oleo Script';
+  font-size: large;
+}
+
+.animais{
+  margin-top:15px;
+}
+
+.animais .animal .estrela{
+  position: absolute;
+  top:0;
+  right: 0;
+}
+
+.animais .animal.desativado{
+  display: none;
 }
