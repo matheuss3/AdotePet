@@ -10,7 +10,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/devweb/backend/api/rotas/Router.php";
 //padrao de projetos strategy   
 class Animais implements IRouter {
 
-    // chamada do buscarCachorros apenas para teste do get - futuramente enviar uma variavel para decidir qual buscarAnimal chamar
+    // chamada do metodo buscar retornando animais Cachorros como exemplo - futuramente, direcionar para cada buscar especifico de acordo com a varivel recebida
     public function get() {
        $animalMapper = new AnimalMapper();
 
