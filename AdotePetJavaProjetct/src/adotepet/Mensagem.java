@@ -1,16 +1,32 @@
 package adotepet;
+import java.util.Calendar;
+import java.util.Date;
+import adotepet.observador.Observado;
+import java.util.Calendar;
 import java.util.Date;
 
-public class Mensagem{
-    private Date dataHora;
+public class Mensagem extends Observado {
+    private Date data;
     private String conteudo;
+    private Pessoa pessoaDestino, pessoaOrigem;
 
-    public Date getDataHora(){
-        return dataHora;
+    public Mensagem(String conteudo, Pessoa pd, Pessoa po){
+        setConteudo(conteudo);
+        setPessoaDestino(pd);
+        setPessoaOrigem(po);
     }
 
-    public void setDataHora(Date dataHora){
-        this.dataHora=dataHora;
+    public void envio(){
+        setData(Calendar.getInstance().getTime());
+        notificaTodos();
+    }
+
+    public Date getData(){
+        return data;
+    }
+
+    public void setData(Date data){
+        this.data=data;
     }
 
     public String getConteudo(){
@@ -19,5 +35,21 @@ public class Mensagem{
 
     public void setConteudo(String conteudo){
         this.conteudo=conteudo;
+    }
+
+    public Pessoa getPessoaDestino(){
+        return pessoaDestino;
+    }
+
+    public void setPessoaDestino(Pessoa pessoaDestino){
+        this.pessoaDestino=pessoaDestino;
+    }
+
+    public Pessoa getPessoaOrigem(){
+        return pessoaOrigem;
+    }
+
+    public void setPessoaOrigem(Pessoa pessoaOrigem){
+        this.pessoaOrigem=pessoaOrigem;
     }
 }

@@ -33,6 +33,7 @@ public class PedidoAdocao{
     public void setDataAlteracaoSituacao(Date dataAlteracaoSituacao){
         this.dataAlteracaoSituacao=dataAlteracaoSituacao;
     }
+    
     private Date dataHora, dataAlteracaoSituacao;
     private String descricao, situacao;
 }
