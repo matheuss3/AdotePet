@@ -11,7 +11,7 @@ public class Doador extends Pessoa{
 
     public void update(Observado o) {
         Mensagem m = (Mensagem) o;
-        System.out.println("Sou o doador");
+        System.out.println("Sou o doador: " + this.getNome());
         String pattern = "MM/dd/yyyy HH:mm:ss";
 
         // Create an instance of SimpleDateFormat used for formatting

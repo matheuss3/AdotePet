@@ -12,64 +12,48 @@ import java.util.Date;
  * @author Matheus
  */
 public class PedidoAdocao {
+    public PedidoAdocao(Date dataHora, String descricao,
+                        Adotante adotante) {
+        this.dataHora = dataHora;
+        this.descricao = descricao;
+        this.situacao = "EM ABERTO";
+        this.adotante = adotante;
+    }
 
-    /**
-     * @return the dataHora
-     */
+    private Date dataHora;
+    private String descricao;
+    private String situacao;
+    private Adotante adotante;
+
     public Date getDataHora() {
         return dataHora;
     }
 
-    /**
-     * @param dataHora the dataHora to set
-     */
     public void setDataHora(Date dataHora) {
         this.dataHora = dataHora;
     }
 
-    /**
-     * @return the descricao
-     */
     public String getDescricao() {
         return descricao;
     }
 
-    /**
-     * @param descricao the descricao to set
-     */
     public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
 
-    /**
-     * @return the situacao
-     */
     public String getSituacao() {
         return situacao;
     }
 
-    /**
-     * @param situacao the situacao to set
-     */
     public void setSituacao(String situacao) {
         this.situacao = situacao;
     }
 
-    /**
-     * @return the dataAlteracaoSituacao
-     */
-    public Date getDataAlteracaoSituacao() {
-        return dataAlteracaoSituacao;
+    public Adotante getAdotante() {
+        return adotante;
     }
 
-    /**
-     * @param dataAlteracaoSituacao the dataAlteracaoSituacao to set
-     */
-    public void setDataAlteracaoSituacao(Date dataAlteracaoSituacao) {
-        this.dataAlteracaoSituacao = dataAlteracaoSituacao;
+    public void setAdotante(Adotante adotante) {
+        this.adotante = adotante;
     }
-    private Date dataHora;
-    private String descricao;
-    private String situacao;
-    private Date dataAlteracaoSituacao;
 }

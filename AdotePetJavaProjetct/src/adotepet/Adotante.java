@@ -12,7 +12,7 @@ public class Adotante extends Pessoa {
 
     public void update(Observado o) {
         Mensagem m = (Mensagem) o;
-        System.out.println("Sou o adotante");
+        System.out.println("Sou o adotante: " + this.getNome());
 
         String pattern = "MM/dd/yyyy HH:mm:ss";
 
